@@ -1,0 +1,98 @@
+{
+  "info": {
+    "name": "Spy Cat Agency API",
+    "_postman_id": "123e4567-e89b-12d3-a456-426614174000",
+    "description": "Basic collection for Spy Cat Agency backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "List all cats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/cats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["cats"]
+        }
+      }
+    },
+    {
+      "name": "Create new cat",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Whiskers\",\n  \"years_of_experience\": 5,\n  \"breed\": \"beng\",\n  \"salary\": 1500.00\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["cats"]
+        }
+      }
+    },
+    {
+      "name": "Get single cat",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/cats/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["cats", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update cat salary",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"salary\": 2000.00\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8000/cats/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["cats", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete cat",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/cats/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["cats", "1"]
+        }
+      }
+    }
+  ]
+}
